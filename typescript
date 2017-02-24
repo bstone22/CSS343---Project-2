@@ -1,0 +1,120 @@
+Script started on Sun 29 Jan 2017 03:03:11 PM PST
+]0;b@b-MS-7998: ~/Desktop/finalTest[01;32mb@b-MS-7998[00m:[01;34m~/Desktop/finalTest[00m$ cd[K[Kg++ bintree.cpp i[Kbintree.h la[K[K[K[K[K[K[K[K[K[K[K[Knodedt[Kata.cpp labe[K2.cpp
+]0;b@b-MS-7998: ~/Desktop/finalTest[01;32mb@b-MS-7998[00m:[01;34m~/Desktop/finalTest[00m$ valgrind ./a.out
+==4900== Memcheck, a memory error detector
+==4900== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4900== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4900== Command: ./a.out
+==4900== 
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Tree Inorder:
+and eee ff iii jj m not ooo pp r sssss tttt y z 
+                        z
+                    y
+                tttt
+                        sssss
+                    r
+                        pp
+                            ooo
+            not
+                    m
+                jj
+        iii
+                ff
+            eee
+                and
+Retrieve --> and:  found
+Retrieve --> not:  found
+Retrieve --> sss:  not found
+Height    --> and:  1
+Height    --> not:  5
+Height    --> sss:  0
+Height    --> tttt:  4
+Height    --> ooo:  1
+Height    --> y:  2
+T == T2?     equal
+T != first?  equal
+T == dup?    equal
+                    z
+                y
+                    tttt
+            sssss
+                    r
+                pp
+                    ooo
+        not
+                    m
+                jj
+                    iii
+            ff
+                    eee
+                and
+---------------------------------------------------------------
+Initial data:
+  b a c b a c $$ 
+Tree Inorder:
+a b c 
+            c
+        b
+            a
+Retrieve --> and:  not found
+Retrieve --> not:  not found
+Retrieve --> sss:  not found
+Height    --> and:  0
+Height    --> not:  0
+Height    --> sss:  0
+Height    --> tttt:  0
+Height    --> ooo:  0
+Height    --> y:  0
+T == T2?     equal
+T != first?  not equal
+T == dup?    not equal
+            c
+        b
+            a
+---------------------------------------------------------------
+Initial data:
+  c b a $$ 
+Tree Inorder:
+a b c 
+        c
+            b
+                a
+Retrieve --> and:  not found
+Retrieve --> not:  not found
+Retrieve --> sss:  not found
+Height    --> and:  0
+Height    --> not:  0
+Height    --> sss:  0
+Height    --> tttt:  0
+Height    --> ooo:  0
+Height    --> y:  0
+T == T2?     equal
+T != first?  not equal
+T == dup?    not equal
+            c
+        b
+            a
+---------------------------------------------------------------
+Initial data:
+   
+==4900== 
+==4900== HEAP SUMMARY:
+==4900==     in use at exit: 72,704 bytes in 1 blocks
+==4900==   total heap usage: 203 allocs, 202 frees, 88,088 bytes allocated
+==4900== 
+==4900== LEAK SUMMARY:
+==4900==    definitely lost: 0 bytes in 0 blocks
+==4900==    indirectly lost: 0 bytes in 0 blocks
+==4900==      possibly lost: 0 bytes in 0 blocks
+==4900==    still reachable: 72,704 bytes in 1 blocks
+==4900==         suppressed: 0 bytes in 0 blocks
+==4900== Rerun with --leak-check=full to see details of leaked memory
+==4900== 
+==4900== For counts of detected and suppressed errors, rerun with: -v
+==4900== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+]0;b@b-MS-7998: ~/Desktop/finalTest[01;32mb@b-MS-7998[00m:[01;34m~/Desktop/finalTest[00m$ exit
+exit
+
+Script done on Sun 29 Jan 2017 03:03:43 PM PST
